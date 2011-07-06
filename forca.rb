@@ -17,4 +17,9 @@ class Forca
 	def chutar(char)
 		@chutes -= 1 unless @palavra.include?(char)
 	end
+	
+	def perdeu?
+		true
+	end
+	
 end

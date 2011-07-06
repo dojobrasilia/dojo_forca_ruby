@@ -27,6 +27,13 @@ describe Forca do
 		f= Forca.new('Pera')
 		f.chutar 'e'
 		f.chutes.should == 10
-	
 	end
+	
+	it 'deve perder se errar 10 vezes' do
+		f= Forca.new('Pera')
+		10.times { f.chutar 'z' }
+		f.chutes.should == 0
+		f.should be_perdeu
+	end
+	
 end
